@@ -1,0 +1,27 @@
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+header {
+	background: url(../img/1.jpg) no-repeat top/ cover;
+	height: 600px;
+
+}
+.container {
+	width: 700px;
+	margin: 0 auto;
+}
+
+.right {
+	font-size: 16px;
+	margin-right: auto;
+}
+
+h1	{
+	margin-left: auto;
+}
+
+button {
+	
+}
