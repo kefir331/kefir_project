@@ -1,1 +1,1 @@
-web: python -m http.server $PORT
+web: pipenv run python src/manage.py runserver PORT
