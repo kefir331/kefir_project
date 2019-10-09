@@ -25,7 +25,7 @@ SECRET_KEY = '_q204#d$sh644b)bf!)2wv7n_je2redzvn5txbci1p)onu9*=t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost","127.0.0.1", "https://kefir331.herokuapp.com/"]
 
 
 # Application definition
