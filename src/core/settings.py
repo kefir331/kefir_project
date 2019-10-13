@@ -25,7 +25,7 @@ SECRET_KEY = '_q204#d$sh644b)bf!)2wv7n_je2redzvn5txbci1p)onu9*=t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost","127.0.0.1", "kefir331.herokuapp.com"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "kefir331.herokuapp.com"]
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # our apps
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +56,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [f"{BASE_DIR}/core/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
