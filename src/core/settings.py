@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = _settings.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = _settings.DEBUG
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "kefir331.herokuapp.com"]
+ALLOWED_HOSTS = _settings.ALLOWED_HOSTS
 
 
 # Application definition
@@ -123,15 +123,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-import json
-print(
-    json.dumps(
-        {
-            "ALLOWED_HOSTS": ALLOWED_HOSTS,
-            "DEBUG": DEBUG,
-            "SECRET_KEY": SECRET_KEY,
-        },
-        indent=4,
-        sort_keys=True,
-    )
-)
+
