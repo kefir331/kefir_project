@@ -3,7 +3,7 @@
 **/*secrets.*
 **/*sqlite*
 **/*venv*
-**/.env
+#**/.env
 **/.idea/
 **/.ipynb*
 **/build
@@ -17,3 +17,6 @@
 .vscode
 __pycache__
 pgdata
+
+#secrets
+**/.secrets.yaml.*

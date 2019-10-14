@@ -1,0 +1,88 @@
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+h1 {
+	color: green;
+	padding-top: 15px;
+}
+
+header {
+	background: url(../img/1.jpg) no-repeat top/ cover;
+	height: 600px;
+}
+
+nav {
+	margin-top: 50px;
+	padding-left: 0;
+
+}
+
+.container {
+	width: 900px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.right {
+	font-size: 16px;
+	margin-right: auto;
+}
+
+.title_first {
+	font-size: 40px;
+	color: yellow;
+	width: 1000px;
+	margin-left: 100px;
+	padding: 50px;
+	text-align: center;
+}
+
+.ent {
+	float: right;
+	width: 120px;
+	margin: 3px;
+
+}
+
+.menu {
+	padding: 0;
+	margin: 0;
+}
+
+.menu a {
+	text-decoration: none;
+	text-transform: uppercase;
+	display: block;
+}
+
+.sell {
+    color: red;
+	display: block;
+	border-radius: 3px;
+	float: right;
+	width: 240px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: red;
+}
+
+.buy {
+	color: green;
+	float: left;
+	display: block;
+	border-radius: 3px;
+	width: 240px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: green;
+}
