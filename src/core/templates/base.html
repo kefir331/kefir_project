@@ -7,62 +7,87 @@
  </head>
  <body>
   <header>
-    <div class="container">
-      <h1>BuySellBitcoins</h1>
-        <nav>
-          <ul class="menu">
-            <button>
-              <a href="#">Купить Биткоин</a>
-            </button>
-            <button>
-              <a href="#">Продать Биткоин</a>
-            </button>
-            <button>
-              <a href="#">Справка</a>
-            </button>
-            <button class="ent">
-              <a href="#">Войти</a>
-            </button>
-            <button class="ent">
-              <a href="#">Регистрация</a>
-            </button>
-          </ul>
-        </nav>
+    <h1>BuySellBitcoins</h1>
+
+    <div class="container">      
+      <form class="menu">
+        <p><select>
+          <optgroup class="country" label="Страна">
+            <option value="с1">Россия</option>
+            <option value="с2">Беларусь</option>
+            <option value="с3">Украина</option>
+            <option value="с4">Польша</option>
+          </optgroup>
+        </select></p>
+        <p><select>
+          <optgroup class="wallet" label="Валюта">
+            <option value="w1">RUB</option>
+            <option value="w2">BYN</option>
+            <option value="w3">UAH</option>
+            <option value="w4">PLN</option>            
+          </optgroup>
+        </select></p>
+      </form>
+      <button class="menu">Search</button>
+
+      <nav>
+        <ul class="auth_menu">
+          <button class="auth">
+            <a href="#">Войти</a>
+          </button>
+          <button class="auth">
+            <a href="#">Регистрация</a>
+          </button>
+        </ul>
+      </nav>
     </div>
     <div class="title_first">
       Покупайте и продавайте биткоины рядом с вами
     </div>
-    <div class="container">
-        <table class="b">
-            <caption>
-                <li class="buy">
-                    <a href="#">Быстрая покупка</a>
-                </li>
-            </caption>
-            <tr>
-                <th>Seller</th>
-                <th>Payment method</th>
-                <th>Price</th>
-                <th>Limit</th>
-                <th>Start deal</th>
-            </tr>
-            <tr> <td>34,5</td> <td>3,5</td> <td>36</td> <td>23</td> <td><button>DO IT</button></td> </tr>
-        </table>
-        <table class="s">
-            <caption>
-                <li class="sell">
-                    <a href="#">Быстрая продажа</a>
-                </li>
-            </caption>
-            <tr>
+
+    <div class="search_trade_form">
+      <ul class="navigation_tab" role="tablist">
+        <li role="presentation" class="active_buy">
+          <a href="#" class="buy_tab" aria-controls="user_form_buy" role="tab" data-toggle="tab" aria-expanded="true">Быстрая покупка</a>
+        </li>       
+        <li role="presentation" class="active_sell">
+          <a href="#" class="sell_tab" aria-controls="user_form_sell" role="tab" data-toggle="tab" aria-expanded="false">Быстрая продажа</a>
+        </li>
+      </ul>
+        <div class="tab-content">
+          <div role="tabpanel" class="active_buy" id="user_form_buy">
+            <form action="/instant-bitcoins/" class="search-form" method="post">
+              <table class="buyers">
                 <th>Buyer</th>
                 <th>Payment method</th>
                 <th>Price</th>
                 <th>Limit</th>
                 <th>Start deal</th>
-            </tr>
-            <tr> <td>34,5</td> <td>3,5</td> <td>36</td> <td>23</td> <td><button>DO IT</button></td> </tr>
-        </table>
+                <tr><td>34,5</td><td>3,5</td><td>36</td><td>23</td> 
+                  <td>
+                    <button>DO IT</button>
+                  </td> 
+                </tr>                 
+              </table>
+            </form>
+          </div>
+          <div role="tabpanel" class="active_sell" id="user_form_sell">
+            <form action="/instant-bitcoins/" class="search-form" method="post">
+              <table class="sellers">
+                <th>Seller</th>
+                <th>Payment method</th>
+                <th>Price</th>
+                <th>Limit</th>
+                <th>Start deal</th>
+                <tr><td>34,5</td><td>3,5</td><td>36</td><td>23</td> 
+                  <td>
+                    <button>DO IT</button>
+                  </td> 
+                </tr>                
+              </table>
+            </form>            
+          </div>
+        </div>
     </div>
   </header>
 

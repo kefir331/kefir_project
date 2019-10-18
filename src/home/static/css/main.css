@@ -1,23 +1,37 @@
-body {
+.auth_menu {
+	float: right;
+}
+
+.menu p {
+	float: left;
+	display: block;
+	margin: 15px 0px 5px 10px;
 	padding: 0px;
-	margin: 0px;
+}
+
+select {
+	padding: 5px;
 }
 
 h1 {
+	float: left;
 	color: green;
-	padding-top: 15px;
+	padding-top: 5px;
+	padding: 10px;
+	width: 220px;
+	margin: 5px;
+	margin-right: 10px;
 }
 
 header {
 	background: powderblue;
-	padding: 0;
-	margin: 0;
+	padding: 10px;
+	margin: 10px;
 	height: 600px;
 }
 
 nav {
-	margin-top: 50px;
-	padding-left: 0;
+	float: right;
 
 }
 
@@ -33,15 +47,14 @@ nav {
 }
 
 .title_first {
-	font-size: 40px;
+	font-size: 35px;
 	color: sandybrown;
-	width: 1000px;
-	margin-left: 100px;
+	width: auto;
 	padding: 50px;
 	text-align: center;
 }
 
-.ent {
+.auth {
 	float: right;
 	width: 120px;
 	margin: 3px;
@@ -49,8 +62,8 @@ nav {
 }
 
 .menu {
-	padding: 0;
-	margin: 0;
+	margin: 5px;
+	padding: 5px;
 }
 
 .menu a {
@@ -59,14 +72,14 @@ nav {
 	display: block;
 }
 
-.sell {
-    color: red;
+.sell_tab {
+    color: #fff;
 	display: block;
 	border-radius: 3px;
 	float: right;
-	width: 420px;
+	width: 480px;
 	padding: 20px 0;
-	margin: 0 auto;
+	margin: 0;
 	text-decoration: none;
 	text-align: center;
 	text-transform: uppercase;
@@ -74,12 +87,12 @@ nav {
 	background: red;
 }
 
-.buy {
-	color: green;
-	float: right;
+.buy_tab {
+	color: #fff;
+	float: left;
 	display: block;
 	border-radius: 3px;
-	width: 420px;
+	width: 480px;
 	padding: 20px 0;
 	margin: 0 auto;
 	text-decoration: none;
@@ -90,11 +103,30 @@ nav {
 }
 
 
-.b {
-	float: left;
-	padding-left: 0;
+.search_trade_form {
+	padding: auto;
+	margin: auto;
 }
 
-.s {
-	float: right;
+.navigation_tab {
+	display: block;
+	padding: 0;
+	margin: 0;
 }
+
+
+.active_buy {
+	float: left;
+	padding: 0;
+	margin: 0;
+	width: 50px;
+}
+
+.active_sell {
+	float: right;
+	padding: 0;
+	margin: 0;
+}
+
+
+
