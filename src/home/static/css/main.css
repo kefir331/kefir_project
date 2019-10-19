@@ -1,22 +1,17 @@
-.auth {
-	float: right;
-	width: 120px;
-	margin: 3px;
+body {
+	width: -webkit-fill-available;
+	margin: 0;
+	padding: 0;
 }
 
-.auth_button {
-	float: right;
-}
 
-.menu p {
-	float: left;
-	display: block;
-	margin: 15px 0px 5px 10px;
-	padding: 0px;
-}
-
-select {
-	padding: 5px;
+header {
+	background: rgb(0,0,0);	
+	position: fixed;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	width: inherit;
 }
 
 h1 {
@@ -29,13 +24,49 @@ h1 {
 	margin-right: 10px;
 }
 
-header {
-	background: powderblue;
-	padding: 10px;
-	margin: 10px;
-	height: 600px;
+
+
+div {
+	width: auto;
+	padding: 0;
+	margin: 0;
 }
 
+
+.auth {
+	float: right;
+	width: 90px;
+	height: 30px;
+	margin: 14px 3px;
+}
+
+.auth a {
+	color: orange;
+	text-decoration: none;
+	display: block;
+}
+
+.auth_button {
+	float: right;
+	margin-right: 5px;
+}
+
+.menu p {
+	float: left;
+	display: block;
+	margin: 14px 3px;
+}
+
+select {
+	padding: 10px;
+}
+
+
+.ok {
+	width: 90px;
+	margin: 14px 3px;
+	padding: 9px;
+}
 
 
 .container {
@@ -50,24 +81,16 @@ header {
 }
 
 .title_first {
-	font-size: 35px;
+	font-size: 30px;
 	color: sandybrown;
 	width: auto;
-	padding: 50px;
 	text-align: center;
+	padding-top: 120px;
 }
 
 
-.menu {
-	margin: 5px;
-	padding: 5px;
-}
 
-.menu a {
-	text-decoration: none;
-	text-transform: uppercase;
-	display: block;
-}
+
 
 .sell_tab {
     color: #fff;
@@ -104,7 +127,6 @@ header {
 }
 
 .navigation_tab {
-	display: block;
 	width: auto;
 	padding: 0;
 	margin: 0;
@@ -112,6 +134,7 @@ header {
 
 
 .active_buy {
+	display: block;
 	width: 50%;
 	float: left;
 	padding: 0;
@@ -119,6 +142,7 @@ header {
 }
 
 .active_sell {
+	display: block;
 	width: 50%;
 	float: right;
 	padding: 0;
@@ -126,12 +150,81 @@ header {
 }
 
 .table_buy {
+	margin: 0;
 	float: left;
+	width: 50%;
 
 }
 
 .table_sell {
+	margin: 0;
 	float: right;
+	width: 50%;
 }
 
 
+.tab_content {
+	width: inherit;
+}
+
+.buyers {
+	width: -webkit-fill-available;
+	margin: auto;
+	padding: 0;
+	height: auto;
+}
+
+.sellers {
+	width: -webkit-box-sizing;
+	margin: auto;
+	padding: 0;
+	height: auto;
+}
+
+.search_form {
+	margin: 0;
+	width: auto;
+	height: auto;
+}
+
+table {
+	width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+	border: double;
+	font-size: large;
+	border-collapse: separate;
+}
+
+tbody {
+	display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+	border: double;
+	width: auto;
+	margin: 0;
+	padding: 0;
+	height: 0;
+}
+
+th {
+	height:0;
+	-webkit-box-sizing:content-box;
+	text-align: unset;
+	border: double;
+	font-size: large;
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+tr {
+	display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+	border: double;
+	padding: 0;
+	margin: 0;
+	font-size: large;
+}
+
+border-spacing:0;border-collapse:collapse}
