@@ -1,4 +1,10 @@
-.auth_menu {
+.auth {
+	float: right;
+	width: 120px;
+	margin: 3px;
+}
+
+.auth_button {
 	float: right;
 }
 
@@ -30,10 +36,7 @@ header {
 	height: 600px;
 }
 
-nav {
-	float: right;
 
-}
 
 .container {
 	width: 90%;
@@ -54,12 +57,6 @@ nav {
 	text-align: center;
 }
 
-.auth {
-	float: right;
-	width: 120px;
-	margin: 3px;
-
-}
 
 .menu {
 	margin: 5px;
