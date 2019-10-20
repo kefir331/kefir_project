@@ -27,9 +27,8 @@ h1 {
 
 
 div {
-	width: auto;
 	padding: 0;
-	margin: 0;
+
 }
 
 
@@ -150,16 +149,20 @@ select {
 }
 
 .table_buy {
-	margin: 0;
-	float: left;
+	display: block;
 	width: 50%;
+	float: left;
+	margin: auto;
+	height: auto;
 
 }
 
 .table_sell {
-	margin: 0;
 	float: right;
+	display: block;
 	width: 50%;
+	margin: auto;
+	height: auto;
 }
 
 
@@ -168,63 +171,60 @@ select {
 }
 
 .buyers {
-	width: -webkit-fill-available;
+	width: auto;
 	margin: auto;
-	padding: 0;
-	height: auto;
+	
+	
+	
 }
 
 .sellers {
-	width: -webkit-box-sizing;
+	width: auto;
 	margin: auto;
-	padding: 0;
+	
+	
+}
+
+section {
 	height: auto;
 }
 
-.search_form {
-	margin: 0;
-	width: auto;
-	height: auto;
-}
 
 table {
-	width: 100%;
-    max-width: 100%;
-    margin-bottom: 20px;
 	border: double;
-	font-size: large;
-	border-collapse: separate;
+	word-break: break-all;
+	text-align: left;
 }
 
 tbody {
-	display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit;
+	border-color: inherit;
 	border: double;
 	width: auto;
 	margin: 0;
-	padding: 0;
-	height: 0;
+	padding: 0;	
+}
+
+td button {
+	font-size: 25px;
 }
 
 th {
-	height:0;
-	-webkit-box-sizing:content-box;
+	height:auto;
 	text-align: unset;
 	border: double;
-	font-size: large;
-	margin-left: 10px;
-	font-weight: bold;
+	font-size: medium;
+	width: 10%;
+
 }
 
 tr {
-	display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
 	border: double;
+	height: auto;
 	padding: 0;
-	margin: 0;
-	font-size: large;
+	margin: auto;
+	font-size: medium;
 }
 
-border-spacing:0;border-collapse:collapse}
+td {
+	width: 10%;	
+}

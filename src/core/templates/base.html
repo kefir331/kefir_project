@@ -2,44 +2,13 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>BUYSELLBITCOINS</title>
+  <title>{% block title %}T{% endblock %}</title>
   <link rel="stylesheet" type="text/css" href="static/css/main.css">
   
  </head>
     <body>
       <header>
-        <h1>BuySellBitcoins</h1>
-        <div>      
-          <form class="menu">
-            <p><select>
-              <optgroup class="country" label="Страна">
-                <option value="с1">Россия</option>
-                <option value="с2">Беларусь</option>
-                <option value="с3">Украина</option>
-                <option value="с4">Польша</option>
-              </optgroup>
-            </select></p>
-            <p><select>
-              <optgroup class="wallet" label="Валюта">
-                <option value="w1">RUB</option>
-                <option value="w2">BYN</option>
-                <option value="w3">UAH</option>
-                <option value="w4">PLN</option>            
-              </optgroup>
-            </select></p>
-            <button class="ok">Search</button>
-            <nav class="auth_button">
-              <ul>
-                <button class="auth">
-                  <a href="#">Войти</a>
-                </button>
-                <button class="auth">
-                  <a href="#">Регистрация</a>
-                </button>
-              </ul>
-            </nav>                        
-          </form>
-        </div>
+        {% block header %}SHA{% endblock%}
       </header>
       <div class="title_first">
           Покупайте и продавайте биткоины рядом с вами
@@ -55,80 +24,10 @@
               <a href="#" class="sell_tab" aria-controls="user_form_sell" role="tab" data-toggle="tab" aria-expanded="false">Быстрая продажа</a>
             </li>
           </ul>
-            <div class="tab_content">
-              <div class="table_buy" role="tabpanel" id="user_form_buy">
-                <form class="search_form" action="/instant-bitcoins/" method="post">
-                  <table class="buyers">
-                    <tbody>
-                      <tr>
-                        <th>Buyer</th>
-                        <th>Payment method</th>
-                        <th>Price</th>
-                        <th>Limit</th>
-                        <th>Start deal</th>
-                      </tr>                    
-                      <tr>
-                        <td>Nickname</td>
-                        <td>Bank</td>
-                        <td>999</td>
-                        <td>20-1000</td> 
-                        <td><button>DO IT</button></td>
-                      </tr>
-                      <tr>
-                        <td>Nickname</td>
-                        <td>Bank</td>
-                        <td>999</td>
-                        <td>20-1000</td> 
-                        <td><button>DO IT</button></td>
-                      </tr> 
-                      <tr>
-                        <td>Nickname</td>
-                        <td>Bank</td>
-                        <td>999</td>
-                        <td>20-1000</td> 
-                        <td><button>DO IT</button></td>
-                      </tr>                                               
-                    </tbody>                 
-                  </table>
-                </form>
-              </div>
-              <div class="table_sell" role="tabpanel" id="user_form_sell">
-                <form class="search_form" action="/instant-bitcoins/" method="post">
-                  <table class="sellers">
-                    <tbody>
-                      <tr>
-                        <th>Seller</th>
-                        <th>Payment method</th>
-                        <th>Price</th>
-                        <th>Limit</th>
-                        <th>Start deal</th>
-                      </tr>                    
-                      <tr>
-                        <td>Nickname</td>
-                        <td>Bank</td>
-                        <td>999</td>
-                        <td>20-1000</td> 
-                        <td><button>DO IT</button></td> 
-                      </tr>
-                      <tr>
-                        <td>Nickname</td>
-                        <td>Bank</td>
-                        <td>999</td>
-                        <td>20-1000</td> 
-                        <td><button>DO IT</button></td> 
-                      </tr>
-                      <tr>
-                        <td>Nickname</td>
-                        <td>Bank</td>
-                        <td>999</td>
-                        <td>20-1000</td> 
-                        <td><button>DO IT</button></td> 
-                      </tr>                                            
-                    </tbody>                  
-                  </table>
-                </form>            
-              </div>
-            </div>
+        </div>
+        <div class="tab_content">
+            {% block buy_content %}BC{% endblock %}
+            {% block sell_content %}SC{% endblock %}
         </div>
       </section>
 

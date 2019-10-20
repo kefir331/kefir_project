@@ -1,6 +1,96 @@
 {% extends "base.html" %}
 
-{% block title %}Main{% endblock %}
+{% block title %}{{Main}}{% endblock %}
 
 {%block body %}{{body_message}}{% endblock %}
+
+{% block header %}
+<h1>BuySellBitcoins</h1>
+<div>
+  <form class="menu">
+    <p><select>
+      <optgroup class="country" label="Страна">
+        <option value="с1">Россия</option>
+        <option value="с2">Беларусь</option>
+        <option value="с3">Украина</option>
+        <option value="с4">Польша</option>
+      </optgroup>
+    </select></p>
+    <p><select>
+      <optgroup class="wallet" label="Валюта">
+        <option value="w1">RUB</option>
+        <option value="w2">BYN</option>
+        <option value="w3">UAH</option>
+        <option value="w4">PLN</option>
+      </optgroup>
+    </select></p>
+    <button class="ok">Search</button>
+    <nav class="auth_button">
+      <ul>
+        <button class="auth">
+          <a href="#">Войти</a>
+        </button>
+        <button class="auth">
+          <a href="#">Регистрация</a>
+        </button>
+      </ul>
+    </nav>
+  </form>
+</div>
+{% endblock %}
+
+
+{% block buy_content %}
+
+<div class="table_buy">
+  <table class="buyers">
+    <tbody>
+    <tr>
+      <th>Buyer</th>
+      <th>Payment method</th>
+      <th>Price</th>
+      <th>Limit</th>
+      <th>Start deal</th>
+    </tr>
+    <tr>
+      {% for content, data in buyobject %}
+      <td>{{data.content}}</td>
+      {% endfor %}
+      <td><button>Start</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
+
+{% block sell_content %}
+
+<div class="table_sell">
+  <table class="sellers">
+    <tbody>
+      <tr>
+        <th>Seller</th>
+        <th>Payment method</th>
+        <th>Price</th>
+        <th>Limit</th>
+        <th>Start deal</th>
+      </tr>
+      <tr>
+        {% for content, data in sellobject %}
+        <td>{{data.content}}</td>
+        {% endfor %}
+         <td><button>Start</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
 
