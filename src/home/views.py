@@ -27,8 +27,8 @@ def sellers():
     }
 
 
-def index(request):
-    return render(request, "index.html", {
+def actual(request):
+    return render(request, "home/index.html", {
         "buyobject": buyers().items(),
         "sellobject": sellers().items(),
         "body_message": "BuySell",
