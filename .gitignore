@@ -1,6 +1,6 @@
 **/*.egg-info
 **/*.pid
-**/*secrets.*
+config/.secrets.yaml
 **/*sqlite*
 **/*venv*
 #**/.env

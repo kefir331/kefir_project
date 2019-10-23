@@ -31,7 +31,6 @@ def actual(request):
     return render(request, "home/index.html", {
         "buyobject": buyers().items(),
         "sellobject": sellers().items(),
-        "body_message": "BuySell",
         "Main": "BuySellBitcoins Main",
     })
 # Create your views here.
