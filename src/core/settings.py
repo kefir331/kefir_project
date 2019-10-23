@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'message',
     'tradepanel',
     'wallet',
+    'profile',
 ]
 
 MIDDLEWARE = [
