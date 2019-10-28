@@ -3,39 +3,146 @@
 <head>
   <meta charset="utf-8">
   <title>{% block title %}T{% endblock %}</title>
-  <link rel="stylesheet" type="text/css" href="static/css/main.css">
-  
- </head>
-    <body>
+  <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+  <body>
+
       <header>
-        {% block header %}SHA{% endblock%}
+        <h1>BuySellBitcoins</h1>
+        <div>
+          <form class="menu">
+            <p><select>
+              <optgroup class="country" label="Страна">
+                <option value="с1">Россия</option>
+                <option value="с2">Беларусь</option>
+                <option value="с3">Украина</option>
+                <option value="с4">Польша</option>
+              </optgroup>
+            </select></p>
+            <p><select>
+              <optgroup class="wallet" label="Валюта">
+                <option value="w1">RUB</option>
+                <option value="w2">BYN</option>
+                <option value="w3">UAH</option>
+                <option value="w4">PLN</option>
+              </optgroup>
+            </select></p>
+            <button class="ok">Search</button>
+            <span><button class="ok"><a href="/wallet/">Wallet</a></button></span>
+            <span><button class="ok"><a href="/message/">Message</a></button></span>
+            <span><button class="ok"><a href="/tradepanel/">TradePanel</a></button></span>
+            <span><button class="ok"><a href="/profile/"> Profile</a></button></span>
+            <nav class="auth_button">
+              <ul>
+                <button class="auth">
+                  <a href="#">Войти</a>
+                </button>
+                <button class="auth">
+                  <a href="#">Регистрация</a>
+                </button>
+              </ul>
+            </nav>
+          </form>
+         </div>
       </header>
-      <div class="title_first">
-          Покупайте и продавайте биткоины рядом с вами
-      </div>
-      <h3>Buy bitcoins online in Belarus</h3>
-      <section>
-        <div class="search_trade_form">
-          <ul class="navigation_tab" role="tablist">
-            <li role="presentation" class="active_buy">
-              <a href="#" class="buy_tab">Быстрая покупка</a>
-            </li>       
-            <li role="presentation" class="active_sell">
-              <a href="#" class="sell_tab">Быстрая продажа</a>
-            </li>
-          </ul>
+      <br>
+      <br>
+      <br>
+
+
+        <div>
+        {% block title_first %}{% endblock %}
+        <h3>Buy bitcoins online in Belarus</h3>
+        {% block homesection %}{% endblock %}
+        {% block tradepanelsection %}{% endblock %}
+        {% block messagesection %}{% endblock %}
+        {% block profilesection %}{% endblock %}
+        {% block walletsection %}{% endblock %}
         </div>
-        <div class="tab_content">
-            {% block buy_content %}BC{% endblock %}
-            {% block sell_content %}SC{% endblock %}
-        </div>
-      </section>
+
 
       <footer>
-        <div class="container">
-
+        <div class="fot31">
+          <div class="fot311">
+            <div class="fot311-logo">
+              <img src="#">
+              <br>
+              <br>
+              <a href="http://www.facebook.com" target="_blank">Facebook</a>
+              <a href="http://www.twitter.com" target="_blank">Twitter</a>
+              <a href="http://www.vk.com" target="_blank">Vkontakte</a>
+              <a href="http://www.instagram.com" target="_blank">Instagram</a>
+              <a href="http://t.me/buysell_official_group" target="_blank">Telegram</a>
+              <br>
+              <br>
+              "2019"
+              "&nbsp;BuySellBitcoins.com"
+            </div>
+            <div class="fot32">
+              <ol>
+                <li class="fot322">Products</li>
+                <li class="fot323">
+                  <a class="fot324" href="#">P2P-exchange</a>
+                </li>
+                <li class="fot323">
+                  <a class="fot324" href="#">Exchange</a>
+                </li>
+                <li class="fot323">
+                  <a class="fot324" href="#">Wallet</a>            
+                </li>
+                <li class="fot323">
+                  <a class="fot324" href="#">Merchant</a>            
+                </li>
+              </ol>        
+            </div>
+            <div class="fot33">
+              <ol>
+                <li class="fot332">Company</li>
+                <li class="fot333">
+                  <a class="fot334" href="#">About the company</a>
+                </li>
+                <li class="fot333">
+                  <a class="fot334" href="#">Blog</a>
+                </li>
+                <li class="fot333">
+                  <a class="fot334" href="#">Referral program</a>            
+                </li>
+                <li class="fot333">
+                  <a class="fot334" href="#">Comission</a>            
+                </li>
+                <li class="fot333">
+                  <a class="fot334" href="#">Terms of use</a>            
+                </li>
+                <li class="fot333">
+                  <a class="fot334" href="#">Security policy</a>            
+                </li>          
+              </ol>
+            </div>
+            <div class="34">
+              <ol>
+                <li class="fot342">HELP</li>
+                <li class="fot343">
+                  <a class="fot344" href="#">How to secure youself</a>
+                </li>
+                <li class="fot343">
+                  <a class="fot344" href="#">Forum</a>
+                </li>
+                <li class="fot343">
+                  <a class="fot344" href="#">Account Verification</a>
+                </li>
+                <li class="fot343">
+                  <a class="fot344" href="#">Support in Telegramm</a>
+                </li>
+                <li class="fot343">
+                  <a class="fot344" href="#">Support</a>            
+                </li>
+                <li class="fot343">
+                  <a class="fot344" href="#">Wallet stats</a>            
+                </li>          
+              </ol>
+            </div>      
+          </div>    
         </div>
       </footer>
-          
-    </body>
+  </body>
 </html>

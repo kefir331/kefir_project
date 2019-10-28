@@ -4,9 +4,82 @@
 
 {% block page_name %}Кошелек{% endblock %}
 
-{% block content %}
 
-1000:дописать
+{% block walletsection %}
+<ul class="navwallet">
+	<li class="nv">
+		<a href="#">Send bitcoins</a>
+	</li>
+	<li class="nv">
+		<a href="#">Receive bitcoins</a>
+	</li>
+	<li class="nv">
+		<a href="#">Transactions</a>
+	</li>
+</ul>
+<br>
+
+<div class="srt">
+	<div class="sb">
+		<h2>Send Bitcoins</h2>
+		<div class="well">
+			<div class="srt">
+				<div class="col-xs1">In your wallet:</div>
+				<div class="col-xs12">
+					<strong>0</strong>
+					"BTC"
+				</div>
+				<div class="col-xs1">Transaction fee:</div>
+				<div class="col-xs12">
+					<strong>0.0001</strong>
+					"BTC"
+				</div>
+				<div class="col-xs1">You can send up to:</div>
+				<div class="col-xs12">
+					<strong>0</strong>
+					"BTC"
+				</div>
+			</div>
+		</div>
+		<form>
+			<input type="hidden" name="#" value="#">
+			<input type="hidden" name="#" value="#">
+			<div class="field-row" id="row_id_address_to">
+				<div id="#" class="#">
+					<label for="id_address_to" class="control-label requiredField">
+							Receiving bitcoin address
+					</label>
+					<div>
+						<input type="#" name="#">	
+					</div>
+				</div>					
+			</div>				
+			<div class="field-row" id="row_id_amount">
+				<div id="div_id_amount" class="#">
+					<label for="id_amount" class="control-label requiredField" id="div_id_address_to">
+							Amount in bitcoins
+					</label>
+					<div>
+						<input type="#" name="#">	
+					</div>
+				</div>					
+			</div>
+			
+			<hr>
+
+
+
+
+		</form>
+
+	</div>
+</div>
+
+
+
+
+
+
 
 {% endblock %}
 

@@ -1,3 +1,7 @@
+span {
+	float: right;
+}
+
 body {
 	width: -webkit-fill-available;
 	margin: 0;
@@ -31,6 +35,9 @@ div {
 
 }
 
+section {
+	background: rgb(32, 227, 211);
+}
 
 .auth {
 	float: right;
@@ -60,6 +67,23 @@ select {
 	padding: 10px;
 }
 
+strong {
+	float: left;
+}
+
+.col-xs1 {
+	float: left;
+	padding-right: 25px;
+}
+
+.nv {
+	float: left;
+	padding-right: 25px;
+}
+
+.well {
+	padding-left: 25px;
+}
 
 .ok {
 	width: 90px;

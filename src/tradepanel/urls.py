@@ -1,4 +1,5 @@
 from django.urls import path
-from django.views.generic import TemplateView
+from tradepanel import views
 
-urlpatterns = [path("", TemplateView.as_view(template_name="tradepanel/index.html"), name="tradepanel")]
+urlpatterns = [
+    path("", views.tradepanel, name="tradepanel")]

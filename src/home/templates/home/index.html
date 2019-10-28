@@ -2,88 +2,71 @@
 
 {% block title %}{{Main}}{% endblock %}
 
-{% block header %}
-<h1>BuySellBitcoins</h1>
-<div>
-  <form class="menu">
-    <p><select>
-      <optgroup class="country" label="Страна">
-        <option value="с1">Россия</option>
-        <option value="с2">Беларусь</option>
-        <option value="с3">Украина</option>
-        <option value="с4">Польша</option>
-      </optgroup>
-    </select></p>
-    <p><select>
-      <optgroup class="wallet" label="Валюта">
-        <option value="w1">RUB</option>
-        <option value="w2">BYN</option>
-        <option value="w3">UAH</option>
-        <option value="w4">PLN</option>
-      </optgroup>
-    </select></p>
-    <button class="ok">Search</button>
-    <nav class="auth_button">
-      <ul>
-        <button class="auth">
-          <a href="#">Войти</a>
-        </button>
-        <button class="auth">
-          <a href="#">Регистрация</a>
-        </button>
-      </ul>
-    </nav>
-  </form>
+{% block title_first %}
+<div class="title_first">
+    Покупайте и продавайте биткоины рядом с вами
 </div>
 {% endblock %}
 
-{% block buy_content %}
-
-<div class="table_buy">
-  <table class="buyers">
-    <tbody>
-    <tr>
-      <th>Buyer</th>
-      <th>Payment method</th>
-      <th>Price</th>
-      <th>Limit</th>
-      <th>Start deal</th>
-    </tr>
-    <tr>
-      {% for content, data in buyobject %}
-      <td>{{data.content}}</td>
-      {% endfor %}
-      <td><button>Start</button></td>
-    </tr>
-    </tbody>
-  </table>
-</div>
-
+{% block homesection %}
+<section>
+  <div class="search_trade_form">
+    <ul class="navigation_tab" role="tablist">
+      <li role="presentation" class="active_buy">
+        <a href="#" class="buy_tab">Быстрая покупка</a>
+      </li>
+      <li role="presentation" class="active_sell">
+        <a href="#" class="sell_tab">Быстрая продажа</a>
+      </li>
+    </ul>
+  </div>
+  <div class="tab_content">
+    <div class="table_buy">
+      <table class="buyers">
+        <tbody>
+          <tr>
+            <th>Buyer</th>
+            <th>Payment method</th>
+            <th>Price</th>
+            <th>Limit</th>
+            <th>Start deal</th>
+          </tr>
+          <tr>
+            {% for content, data in buyobject %}
+            <td>{{data.content}}</td>
+            {% endfor %}
+            <td><button>Start</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table_sell">
+      <table class="sellers">
+        <tbody>
+          <tr>
+            <th>Seller</th>
+            <th>Payment method</th>
+            <th>Price</th>
+            <th>Limit</th>
+            <th>Start deal</th>
+          </tr>
+          <tr>
+            {% for content, data in sellobject %}
+            <td>{{data.content}}</td>
+            {% endfor %}
+             <td><button>Start</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 {% endblock %}
 
-{% block sell_content %}
+<footer>
 
-<div class="table_sell">
-  <table class="sellers">
-    <tbody>
-      <tr>
-        <th>Seller</th>
-        <th>Payment method</th>
-        <th>Price</th>
-        <th>Limit</th>
-        <th>Start deal</th>
-      </tr>
-      <tr>
-        {% for content, data in sellobject %}
-        <td>{{data.content}}</td>
-        {% endfor %}
-         <td><button>Start</button></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+</footer>
 
-{% endblock %}
 
 
 

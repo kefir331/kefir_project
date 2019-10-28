@@ -1,3 +1,4 @@
 from django.contrib import admin
+from tradepanel import models
 
-# Register your models here.
+admin.site.register(models.Tradeorders)

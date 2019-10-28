@@ -8,6 +8,8 @@ verify_ssl = true
 [packages]
 django = "*"
 dynaconf = {extras = ["yaml"],version = "*"}
+psycopg2 = "*"
+dj-database-url = "*"
 
 [requires]
 python_version = "3.7"

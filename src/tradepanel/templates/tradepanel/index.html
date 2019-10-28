@@ -4,9 +4,15 @@
 
 {% block page_name %}Тоговая Панель{% endblock %}
 
-{% block content %}
+{% block tradepanelsection %}
 
-1000:дописать
+<ul style="list-style: initial; padding-left: 40px">
+    {% for order in tradeorderus %}
+    <li>{{order.order_num}}</li>
+    <li>{{order.order_url}}</li>
+    {% endfor %}
+
+</ul>
 
 {% endblock %}
 
