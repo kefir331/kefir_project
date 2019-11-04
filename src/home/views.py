@@ -1,8 +1,22 @@
 from platform import system
+from django.views.generic import TemplateView
 from typing import NamedTuple
-
-from django.core.signing import Signer
+from home.models import Currency, Country
 from django.shortcuts import render
+
+class HomeViews(TemplateView):
+    http_method_names = {"get", "post"}
+
+    template_name = "home/index.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context["currency"] = Currency.objects.all()
+        context["country"] = Country.objects.all()
+
+        return context
+
 
 
 class TabContent(NamedTuple):
@@ -33,4 +47,7 @@ def actual(request):
         "sellobject": sellers().items(),
         "Main": "BuySellBitcoins Main",
     })
-# Create your views here.
+
+
+
+

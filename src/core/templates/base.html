@@ -11,22 +11,10 @@
         <h1>BuySellBitcoins</h1>
         <div>
           <form class="menu">
-            <p><select>
-              <optgroup class="country" label="Страна">
-                <option value="с1">Россия</option>
-                <option value="с2">Беларусь</option>
-                <option value="с3">Украина</option>
-                <option value="с4">Польша</option>
-              </optgroup>
-            </select></p>
-            <p><select>
-              <optgroup class="wallet" label="Валюта">
-                <option value="w1">RUB</option>
-                <option value="w2">BYN</option>
-                <option value="w3">UAH</option>
-                <option value="w4">PLN</option>
-              </optgroup>
-            </select></p>
+            <p>
+            {% block currency %}Money{% endblock %}
+            </p>
+            </select>
             <button class="ok">Search</button>
             <span><button class="ok"><a href="/wallet/">Wallet</a></button></span>
             <span><button class="ok"><a href="/message/">Message</a></button></span>
