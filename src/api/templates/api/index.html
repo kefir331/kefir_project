@@ -1,0 +1,23 @@
+{% extends "base.html %}
+
+{% block title %}API{% endblock %}
+
+{% block page_name %}API{% endblock %}
+
+{% block api %}
+
+<div>
+    <label for="textarea-api-token">Token</label>
+</div>
+<div>
+    <textarea style="background-color: #002207; color: #01efad" name="api" id="textarea-api-token" cols="56" readonly rows="8">{{object.token}}</textarea>
+</div>
+
+<div>
+    <form action="{%url_'api_reset_token' %}" method="post" >
+        {% csrf_token %}
+        <button type="submit">Reset Token</button>
+    </form>
+</div>
+
+{% endblock %}

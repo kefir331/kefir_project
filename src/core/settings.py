@@ -4,6 +4,7 @@ import dj_database_url
 
 from pathlib import Path
 
+from django.urls import reverse_lazy
 from dynaconf import settings as _settings
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -29,6 +30,7 @@ INSTALLED_APPS = [
     'tradepanel',
     'wallet',
     'profile',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -110,5 +112,14 @@ STATIC_DIR.mkdir(exist_ok=True)
 STATIC_ROOT = STATIC_DIR.as_posix()
 
 STATIC_URL = "/static/"
+
+LOGIN_REDIRECT_URL= reverse_lazy("actual")
+
+PASSWORD_HASHERS = [
+    "django.contrib.auth.hashers.BCrypt.BCryptSHA256PasswordHasher",
+    "django.contrib.auth.hashers.PBKDF2PasswordHasher",
+    "django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher",
+    "django.contrib.auth.hashers.Argon2PasswordHasher",
+]
 
 
