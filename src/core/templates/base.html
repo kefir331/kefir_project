@@ -42,13 +42,13 @@
 
            {% if request.user.is_authenticated %}
           <a class="menu-item{% ifequal request.path u_password_change %} here{% endifequal %}"
-             href="{{u_password_change}}"><span>Change Password</span></a>
-          <a class="menu-item{% ifequal request.path u_logout %} here{% endifequal %}" href="{{u_logout}}"><span>Log Out({{request.user.email}})</span></a>
+             href="{{u_password_change}}"><button>Change Password</button></a>
+          <a class="menu-item{% ifequal request.path u_logout %} here{% endifequal %}" href="{{u_logout}}"><button>Log Out({{request.user.email}})</button></a>
           {% else %}
           <a class="menu-item{% ifequal request.path u_login %} here{% endifequal %}"
-             href="{{u_login}}"><span>Sign In</span></a>
+             href="{{u_login}}"><button>Sign In</button></a>
           <a class="menu-item{% ifequal request.path u_signup %} here{% endifequal %}"
-             href="{{u_signup}}"><span>Sign Up</span></a>
+             href="{{u_signup}}"><button>Sign Up</button></a>
           {% endif %}
 
         </div>
