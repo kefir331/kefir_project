@@ -22,15 +22,15 @@
 
         {% if request.user.is_authenticated %}
         <a href="{{u_wallet}}"
-            class="menu-item{% ifequal request.path u_wallet %} here{% endifequal %}"><span>Wallet</span></a>
+            class="menu-item{% ifequal request.path u_wallet %} here{% endifequal %}"><button>Wallet</button></a>
         <a href="{{u_tradepanel}}"
-            class="menu-item{% ifequal request.path u_tradepanel %} here{% endifequal %}"><span>TradePanel</span></a>
+            class="menu-item{% ifequal request.path u_tradepanel %} here{% endifequal %}"><button>TradePanel</button></a>
         <a href="{{u_message}}"
-            class="menu-item{% ifequal request.path u_message %} here{% endifequal %}"><span>Message</span></a>
+            class="menu-item{% ifequal request.path u_message %} here{% endifequal %}"><button>Message</button></a>
         <a href="{{u_profile}}"
-            class="menu-item{% ifequal request.path u_profile %} here{% endifequal %}"><span>Profile</span></a>
+            class="menu-item{% ifequal request.path u_profile %} here{% endifequal %}"><button>Profile</button></a>
         <a href="{{u_api}}"
-            class="menu-item{% ifequal request.path u_api %} here{% endifequal %}"><span>API</span></a>
+            class="menu-item{% ifequal request.path u_api %} here{% endifequal %}"><button>API</button></a>
         {% endif %}
 
         <div>
