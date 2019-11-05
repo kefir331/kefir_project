@@ -4,7 +4,7 @@
 
 {% block page_name %}API{% endblock %}
 
-{% block api %}
+{% block content %}
 
 <div>
     <label for="textarea-api-token">Token</label>
@@ -14,7 +14,7 @@
 </div>
 
 <div>
-    <form action="{%url_'api_reset_token' %}" method="post" >
+    <form action="{% url 'api_reset_token' %}" method="post" >
         {% csrf_token %}
         <button type="submit">Reset Token</button>
     </form>

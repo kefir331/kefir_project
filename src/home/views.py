@@ -4,6 +4,7 @@ from typing import NamedTuple
 from home.models import Currency, Country
 from django.shortcuts import render
 
+
 class HomeViews(TemplateView):
     http_method_names = {"get", "post"}
 
@@ -16,7 +17,6 @@ class HomeViews(TemplateView):
         context["country"] = Country.objects.all()
 
         return context
-
 
 
 class TabContent(NamedTuple):
@@ -47,7 +47,3 @@ def actual(request):
         "sellobject": sellers().items(),
         "Main": "BuySellBitcoins Main",
     })
-
-
-
-

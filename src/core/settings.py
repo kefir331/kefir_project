@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'wallet',
     'profile',
     'api',
+    'ond',
 ]
 
 MIDDLEWARE = [
@@ -113,10 +114,10 @@ STATIC_ROOT = STATIC_DIR.as_posix()
 
 STATIC_URL = "/static/"
 
-LOGIN_REDIRECT_URL= reverse_lazy("actual")
+LOGIN_REDIRECT_URL = reverse_lazy("home")
 
 PASSWORD_HASHERS = [
-    "django.contrib.auth.hashers.BCrypt.BCryptSHA256PasswordHasher",
+    "django.contrib.auth.hashers.BCryptSHA256PasswordHasher",
     "django.contrib.auth.hashers.PBKDF2PasswordHasher",
     "django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher",
     "django.contrib.auth.hashers.Argon2PasswordHasher",

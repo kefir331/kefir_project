@@ -10,6 +10,7 @@ from django.views.generic.detail import DetailView
 
 from api.models import ApiSettings
 
+
 class ApiSettingsView(LoginRequiredMixin, DetailView):
     http_method_names = ("get",)
 
@@ -19,6 +20,7 @@ class ApiSettingsView(LoginRequiredMixin, DetailView):
     def get_object(self, queryset=None):
         qs = queryset if queryset is not None else self.get_queryset()
         return qs.filter(user=self.request.user).first()
+
 
 class ApiResetTokenView(LoginRequiredMixin, RedirectView):
     http_method_names = ("post",)
