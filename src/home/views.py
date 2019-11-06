@@ -30,11 +30,11 @@ class HomeViews(ListView):
 
         history = super().get_queryset()
 
-        if form.cleaned_data("currency"):
-                history = history.filter(currency=form.cleaned_data("currency"))
+        if form.cleaned_data["currency"]:
+                history = history.filter(currency=form.cleaned_data["currency"])
 
-        if form.cleaned_data("country"):
-                history = history.filter(country=f.cleaned_data("country"))
+        if form.cleaned_data["country"]:
+                history = history.filter(country=form.cleaned_data["country"])
 
         grouped = defaultdict(list)
 
