@@ -1,0 +1,254 @@
+span {
+	float: right;
+}
+
+body {
+	width: -webkit-fill-available;
+	margin: 0;
+	padding: 0;
+}
+
+
+header {
+	background: rgb(0,0,0);	
+	position: fixed;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	width: inherit;
+}
+
+h1 {
+	float: left;
+	color: green;
+	padding-top: 5px;
+	padding: 10px;
+	width: 220px;
+	margin: 5px;
+	margin-right: 10px;
+}
+
+
+
+div {
+	padding: 0;
+
+}
+
+section {
+	background: rgb(32, 227, 211);
+}
+
+.auth {
+	float: right;
+	width: 90px;
+	height: 30px;
+	margin: 14px 3px;
+}
+
+.auth a {
+	color: orange;
+	text-decoration: none;
+	display: block;
+}
+
+.auth_button {
+	float: right;
+	margin-right: 5px;
+}
+
+.menu p {
+	float: left;
+	display: block;
+	margin: 14px 3px;
+}
+
+select {
+	padding: 10px;
+}
+
+strong {
+	float: left;
+}
+
+.col-xs1 {
+	float: left;
+	padding-right: 25px;
+}
+
+.nv {
+	float: left;
+	padding-right: 25px;
+}
+
+.well {
+	padding-left: 25px;
+}
+
+.ok {
+	width: 90px;
+	margin: 14px 3px;
+	padding: 9px;
+}
+
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.right {
+	font-size: 16px;
+	margin-right: auto;
+}
+
+.title_first {
+	font-size: 30px;
+	color: sandybrown;
+	width: auto;
+	text-align: center;
+	padding-top: 120px;
+}
+
+
+
+
+
+.sell_tab {
+    color: #fff;
+	display: block;
+	border-radius: 3px;
+	width: auto;
+	margin: 0 auto;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: red;
+}
+
+.buy_tab {
+	color: #fff;
+	display: block;
+	border-radius: 3px;
+	width: auto;
+	margin: 0 auto;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: green;
+}
+
+
+.search_trade_form {
+	width: inherit;
+	height: auto;
+	padding: 0;
+	margin: auto;
+}
+
+.navigation_tab {
+	width: auto;
+	padding: 0;
+	margin: 0;
+}
+
+
+.active_buy {
+	display: block;
+	width: 50%;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+.active_sell {
+	display: block;
+	width: 50%;
+	float: right;
+	padding: 0;
+	margin: 0;
+}
+
+.table_buy {
+	display: block;
+	width: 50%;
+	float: left;
+	margin: auto;
+	height: auto;
+
+}
+
+.table_sell {
+	float: right;
+	display: block;
+	width: 50%;
+	margin: auto;
+	height: auto;
+}
+
+
+.tab_content {
+	width: inherit;
+}
+
+.buyers {
+	width: auto;
+	margin: auto;
+	
+	
+	
+}
+
+.sellers {
+	width: auto;
+	margin: auto;
+	
+	
+}
+
+section {
+	height: auto;
+}
+
+
+table {
+	border: double;
+	word-break: break-all;
+	text-align: left;
+}
+
+tbody {
+	border-color: inherit;
+	border: double;
+	width: auto;
+	margin: 0;
+	padding: 0;	
+}
+
+td button {
+	font-size: 25px;
+}
+
+th {
+	height:auto;
+	text-align: unset;
+	border: double;
+	font-size: medium;
+	width: 10%;
+
+}
+
+tr {
+	border: double;
+	height: auto;
+	padding: 0;
+	margin: auto;
+	font-size: medium;
+}
+
+td {
+	width: 10%;	
+}

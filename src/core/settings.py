@@ -9,7 +9,7 @@ from dynaconf import settings as _settings
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).parent.parent.resolve()
-
+PROJECT_DIR = BASE_DIR / "core"
 
 SECRET_KEY = _settings.SECRET_KEY
 
@@ -50,7 +50,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [f"{BASE_DIR}/core/templates"],
+        'DIRS': [PROJECT_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -111,6 +111,7 @@ USE_TZ = True
 STATIC_DIR = BASE_DIR / "static"
 STATIC_DIR.mkdir(exist_ok=True)
 STATIC_ROOT = STATIC_DIR.as_posix()
+STATICFILES_DIRS = [PROJECT_DIR / "static"]
 
 STATIC_URL = "/static/"
 

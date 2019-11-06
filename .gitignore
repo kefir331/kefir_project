@@ -20,3 +20,6 @@ pgdata
 
 #secrets
 **/.secrets.yaml.*
+
+# static
+src/static/
