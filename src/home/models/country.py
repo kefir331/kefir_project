@@ -1,5 +1,6 @@
 from django.db import models as m
 
+
 class Country(m.Model):
     title = m.TextField(unique=True)
 

@@ -1,5 +1,6 @@
 from django.db import models as m
 
+
 class Currency(m.Model):
     name = m.TextField(unique=True)
     symbol = m.TextField(null=True, blank=True)
@@ -12,5 +13,3 @@ class Currency(m.Model):
 
     def __str__(self):
         return f"{self.name} ({self.pk})"
-
-

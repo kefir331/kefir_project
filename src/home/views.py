@@ -1,22 +1,47 @@
+from collections import defaultdict
 from platform import system
-from django.views.generic import TemplateView
+from django.views.generic import ListView
 from typing import NamedTuple
-from home.models import Currency, Country
+
+from home.form import SearchForm
+from home.models import UserPosition
+
 from django.shortcuts import render
 
 
-class HomeViews(TemplateView):
-    http_method_names = {"get", "post"}
-
+class HomeViews(ListView):
+    http_method_names = ("get", "post",)
     template_name = "home/index.html"
+    model = UserPosition
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
-        context["currency"] = Currency.objects.all()
-        context["country"] = Country.objects.all()
+        context["form"] = SearchForm(self.request.GET)
 
         return context
+
+    def get_queryset(self):
+        if not self.request.GET:
+            return []
+
+        form = SearchForm(self.request.GET)
+        if not form.is_valid():
+            return []
+
+        history = super().get_queryset()
+
+        if form.cleaned_data("currency"):
+                history = history.filter(currency=form.cleaned_data("currency"))
+
+        if form.cleaned_data("country"):
+                history = history.filter(country=f.cleaned_data("country"))
+
+        grouped = defaultdict(list)
+
+        for h in history:
+            grouped[h.country].append(h)
+
+        return grouped.items()
 
 
 class TabContent(NamedTuple):

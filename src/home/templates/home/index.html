@@ -10,22 +10,21 @@
 
 
 {% block position %}
+
+  <form id="home" method="GET" action="{% url 'home' %}">
+    {{ form.as_p }}
+    <button type="submit">Search</button>
+  </form>
+
 <div>
-  <label  for="currency"></label>
-  <select id="currency" name="currency">
-    {% for c in currency %}
-    <option value="{{c.name}}">{{c.name}}{% if c.symbol %} - {{c.symbol}}{% endif %}</option>
-    {% endfor %}
-  </select>
+  {% for currency, country in object_list %}
+  <div class="pricebox" style="background-color: blue">
+      <div class="pricebox-co"><span>{{country.title}}</span></div>
+      <div class="pricebox-cu"><span>{{currency.symbol}}</span></div>
+  </div>
+  {% endfor %}
 </div>
-<div>
-  <label  for="country"></label>
-  <select id="country" name="country">
-    {% for f in country %}
-    <option value="{{f.title}}">{{f.title}}</option>
-    {% endfor %}
-  </select>
-</div>
+
 {% endblock %}
 
 
@@ -35,10 +34,10 @@
   <div class="search_trade_form">
     <ul class="navigation_tab" role="tablist">
       <li role="presentation" class="active_buy">
-        <a href="#" class="buy_tab">Быстрая покупка</a>
+        <a href="#" class="buy_tab">Buy Bitcoins</a>
       </li>
       <li role="presentation" class="active_sell">
-        <a href="#" class="sell_tab">Быстрая продажа</a>
+        <a href="#" class="sell_tab">Sell Bitcoins</a>
       </li>
     </ul>
   </div>
