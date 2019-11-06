@@ -8,6 +8,8 @@ from home.models import UserPosition
 
 from django.shortcuts import render
 
+from home.models import Country
+
 
 class HomeViews(ListView):
     http_method_names = ("get", "post",)
@@ -16,7 +18,16 @@ class HomeViews(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["form"] = SearchForm(self.request.GET)
+        if self.request.GET:
+            form = SearchForm(self.request.GET)
+            country_id = form.data.get("country")
+            country = Country.objects.filter(pk=country_id).first()
+        else:
+            country = Country.objects.first()
+            form = SearchForm(initial={"country": country})
+
+        context["form"] = form
+        context["country"] = country
 
         return context
 
