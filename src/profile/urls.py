@@ -1,4 +1,9 @@
 from django.urls import path
-from django.views.generic import TemplateView
+from profile.views import AboutView, SecurityView, ReferralView, ProfileView
 
-urlpatterns = [path("", TemplateView.as_view(template_name="profile/index.html"), name="profile")]
+urlpatterns = [
+    path("", ProfileView.as_view(), name="profile"),
+    path("about/", AboutView.as_view(), name="about"),
+    path("security/", SecurityView.as_view(), name="security"),
+    path("referral/", ReferralView.as_view(), name="referral"),
+]
